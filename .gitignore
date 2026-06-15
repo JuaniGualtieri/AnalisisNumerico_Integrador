@@ -1,0 +1,29 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.Python
+
+# --- Entornos virtuales ---
+venv/
+.venv/
+env/
+.env
+
+# --- PyInstaller (artefactos de compilación) ---
+# El .exe (>100 MB) y los intermedios NO se suben: cada uno lo genera
+# localmente con  Construir_EXE.bat
+build/
+dist/
+*.spec
+
+# --- Editores / IDE ---
+.idea/
+.vscode/
+*.swp
+
+# --- Sistema operativo ---
+Thumbs.db
+Desktop.ini
+.DS_Store
