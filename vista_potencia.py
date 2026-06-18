@@ -426,6 +426,15 @@ class VistaPotencia(ctk.CTkFrame):
 
     # ---------------------------------------------------------------- gráfico
     def _dibujar(self, d):
+        """Dibuja DOS gráficos de convergencia del Ejercicio 2:
+              • Arriba: cómo el autovalor estimado (azul = factor de escala,
+                naranja = Rayleigh) se acerca al valor de referencia de NumPy
+                (verde punteado) iteración tras iteración.
+              • Abajo (escala logarítmica): cómo el error entre iteraciones cae
+                rápidamente. En escala log, una recta descendente indica
+                convergencia geométrica (muy veloz).
+           En pocas iteraciones el autovalor ya se estabiliza.
+        """
         c = tema.colores_grafico()
         res = d["res"]
         self.ax1.clear(); self.ax2.clear()

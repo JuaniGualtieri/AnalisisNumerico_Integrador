@@ -445,6 +445,13 @@ class VistaEDO(ctk.CTkFrame):
 
     # ---------------------------------------------------------------- gráfico
     def _dibujar(self, d):
+        """Dibuja el gráfico del Ejercicio 1. En pantalla se ven CUATRO cosas:
+              • línea verde  → solución exacta (la "respuesta real", si existe);
+              • puntos azules → las aproximaciones del método en cada paso;
+              • línea naranja punteada → el polinomio interpolante cerca de x₀;
+              • estrella roja → el valor interpolado y(x₀) que pide la consigna.
+           Que los puntos azules caigan sobre la curva verde = buena aproximación.
+        """
         c = tema.colores_grafico()
         self.ax.clear()
         r = d["resultado"]; interp = d["interp"]
